@@ -1,5 +1,5 @@
-# Basic Starter Kit
+# CPSC Workbook Repository
 
-## Owner your name
+## Nghi Pham
 
 alter this statement to indicate the usage of this repository
