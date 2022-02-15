@@ -1,0 +1,61 @@
+{
+  "TeamName": "Edmonton Oilers",
+  "Players": [
+    {
+      "PlayerName": "Leon Draisatil",
+      "GamePlayed": 46,
+      "Goals": 33,
+      "Assists": 32,
+      "Points": 65
+    },
+    {
+      "PlayerName": "Connor McDavid",
+      "GamePlayed": 45,
+      "Goals": 24,
+      "Assists": 40,
+      "Points": 64
+    },
+    {
+      "PlayerName": "Ryan Nugent-Hopkins",
+      "GamePlayed": 39,
+      "Goals": 6,
+      "Assists": 28,
+      "Points": 34
+    },
+    {
+      "PlayerName": "Zach Hyman",
+      "GamePlayed": 30,
+      "Goals": 14,
+      "Assists": 13,
+      "Points": 27
+    },
+    {
+      "PlayerName": "Jesse Puljujarvi",
+      "GamePlayed": 44,
+      "Goals": 11,
+      "Assists": 15,
+      "Points": 26
+    },
+    {
+      "PlayerName": "Evan Bourchard",
+      "GamePlayed": 46,
+      "Goals": 9,
+      "Assists": 17,
+      "Points": 26
+    },
+    {
+      "PlayerName": "Darnell Nurse",
+      "GamePlayed": 39,
+      "Goals": 5,
+      "Assists": 15,
+      "Points": 20
+    },
+    {
+      "PlayerName": "Tyson Barrie",
+      "GamePlayed": 40,
+      "Goals": 3,
+      "Assists": 14,
+      "Points": 17
+    }
+  ]
+}

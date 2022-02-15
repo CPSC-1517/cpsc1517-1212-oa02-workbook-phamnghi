@@ -9,9 +9,26 @@ namespace OOPDemo01
     internal class Course
     {
         #region Readonly Data Fields
-        //Define readonly data fields
         public readonly string CourseNo;
-        public readonly string CourseName;
+
+        // Define a backing field for CourseName
+        private string _CourseName;
+        // Define a private set property for CourseName
+        public string CourseName
+        {
+            get { return _CourseName; }
+            private set // can only be changed by methods within this class
+                        // External access will not be allowed
+            {
+                //Validate that courseName is not null or an empty string
+                if(string.IsNullOrWhiteSpace(value))
+                {
+                    throw new ArgumentNullException("Course CourseName value is required");
+                }
+                _CourseName = value.Trim();
+            }
+        }
+        // public readonly List<string> Students = new List<string>() 
         public readonly List<string> Students = new List<string>();
         #endregion
 
@@ -112,5 +129,10 @@ namespace OOPDemo01
             return success;
         }
         #endregion
+
+        public override string ToString()
+        {
+            return $"{CourseNo},{CourseName}";
+        }
     }
 }
