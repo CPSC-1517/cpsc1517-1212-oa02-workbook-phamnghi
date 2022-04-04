@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@if (Model.BuildVersionInfo == null)
+{
+    <p style="font-weight:bold; color:red">BuildVersion unknown</p>
+}
+else
+{
+    <p>Database Version:
+        @Model.BuildVersionInfo.Major .
+        @Model.BuildVersionInfo.Minor .
+        @Model.BuildVersionInfo.Build
+        was released on @Model.BuildVersionInfo.ReleaseDate.ToShortDateString()
+    </p>
+}

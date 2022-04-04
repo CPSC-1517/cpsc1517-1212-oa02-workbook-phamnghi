@@ -13,7 +13,7 @@ namespace HockeyTeamSystem
         public PlayerPosition Position { get; private set; } // private set is used for: cannot be edited outside of class
 
         // Define properties with private set for Goals, Assists
-        public int Goals { get; private set; }
+        public int Goals { get; private set; }  // -> auto-implemented property
         public int Assists { get; private set; }
 
         // Define a computed read-only for Points (Goals + Assists)
@@ -103,7 +103,7 @@ namespace HockeyTeamSystem
 
         public static bool TryParse(string csvLineText, HockeyPlayer player)
         {
-            bool success = false;
+            bool success = false;  //-> local variable
             try
             {
                 player = Parse(csvLineText);

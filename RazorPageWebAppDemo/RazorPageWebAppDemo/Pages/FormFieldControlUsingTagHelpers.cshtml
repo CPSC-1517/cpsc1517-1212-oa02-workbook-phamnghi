@@ -1,0 +1,28 @@
+﻿@page
+@model RazorPageWebAppDemo.Pages.FormFieldControlUsingTagHelpersModel
+@{
+    ViewData["Title"] = "Form Fields Using Tag Helpers";
+}
+<h1>HTML Form Field Controls</h1>
+
+@Model.Message
+
+<form method="post">
+    <div>
+        <label asp-for="Username"></label>
+        <input asp-for="Username" />
+    </div>
+    <div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" />
+    </div>
+    <div>
+        <label asp-for="ConfirmPassword"></label>
+        <input asp-for="ConfirmPassword" type="password" />
+    </div>
+
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+
+</form>

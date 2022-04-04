@@ -32,7 +32,7 @@ namespace HockeyTeamSystem
 
         // Define a fully-implemented property with a backing field for the team name
         private string _teamName;   // Define a private backing field for the property
-        public string TeamName      // Define a readonly property for TeamName with a private set
+        public string TeamName      // Define a readonly property for TeamName with a private set -> fully implemented property
         {
             get { return _teamName; }
             private set 
@@ -92,8 +92,16 @@ namespace HockeyTeamSystem
             }
 
             // Validate that the play is not already on the team (by primary number)
-            
-             HockeyPlayers.Add(player);
+            foreach (HockeyPlayer currentPlayer in HockeyPlayers)
+            {
+                if (player.PrimaryNumber == currentPlayer.PrimaryNumber)
+                {
+                    throw new ArgumentException("HockeyTeam add hockey player failed. Player primary number already exists.");
+                }
+
+            }
+
+            HockeyPlayers.Add(player);
         }
 
         public override string ToString()
