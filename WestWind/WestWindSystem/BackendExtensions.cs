@@ -31,7 +31,13 @@ namespace WestWindSystem
                 return new ProductServices(dbContext);
             });
 
-            
+            services.AddTransient<SupplierServices>((serviceProvider) =>
+            {
+                var dbContext = serviceProvider.GetService<WestWindContext>();
+                return new SupplierServices(dbContext);
+            });
+
+
         }
     }
 }

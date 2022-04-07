@@ -1,0 +1,24 @@
+﻿@page "{currentCategoryID?}"
+@model WestWindWebApp.Pages.Categories.CategoryCRUDModel
+@{
+    ViewData["Title"] = "Category CRUD";
+}
+<h1>Category CRUD</h1>
+
+<p>@Model.FeedbackMessage</p>
+
+<form method="post">
+    <label>Category Name
+        <input type="text" asp-for="CurrentCategory.CategoryName"
+            placeholder="Enter category name here" />
+    </label>
+
+    <label>
+        Description:
+        <textarea rows="3" cols="50" asp-for="CurrentCategory.Description"></textarea>
+    </label>
+
+    <button type="submit" asp-page-handler="New">Save New</button>
+    <button type="submit" asp-page-handler="Clear" formnovalidate>Clear</button>
+
+</form>

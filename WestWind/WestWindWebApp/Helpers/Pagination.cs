@@ -40,11 +40,11 @@ namespace WestWindWebApp.Helpers
         {
             return PageReferences.GetEnumerator();
         }
-IEnumerator IEnumerable.GetEnumerator()
-{
-    return PageReferences.GetEnumerator();
-}
-#endregion       
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return PageReferences.GetEnumerator();
+        }
+        #endregion       
         
         #region Properties with calculated Getters        
         ///<summary>PageRefSize sets the page refs to display to a minimum of 5 or a maximum of 10</summary>        
